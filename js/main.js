@@ -10,14 +10,14 @@ let notebook = document.getElementById('notebook');
 let miniNotebook = document.getElementById('mini-notebook');
 //Information
 const bracelets = [
-    { name: 'Pulsera Mod.1 roja', price: 45 },
-    { name: 'Pulsera Mod.2 verde', price: 45 },
-    { name: 'Pulsera Mod.3 morada', price: 45 },
-    { name: 'Pulsera Mod.4 naranja', price: 45 },
-    { name: 'Pulsera Mod.5 rosa', price: 45 },
-    { name: 'Pulsera Mod.6 amarillo', price: 45 },
-    { name: 'Pulsera Mod.7 azul', price: 45 },
-    { name: 'Pulsera Mod.8 turquesa', price: 45 }
+    { name: 'Mod-roja', price: 45 },
+    { name: 'Mod-verde', price: 45 },
+    { name: 'Mod-morada', price: 45 },
+    { name: 'Mod-naranja', price: 45 },
+    { name: 'Mod-rosa', price: 45 },
+    { name: 'Mod-amarillo', price: 45 },
+    { name: 'Mod-azul', price: 45 },
+    { name: 'Mod-turquesa', price: 45 }
 ];
 
 const notebooks = [
@@ -42,17 +42,17 @@ const braceletsAll = (con) => {
               <div class="card">
               <div class="card-image">
                 <img src="${URL}">
-                <a id="${btn}" onclick="cart('${bracelets[con-1].name}', '${bracelets[con-1].price}', 
-                    ${URL}', '${con}', '${btn}')" class="btn btn-floating halfway-fab waves-effect waves-light red">
-                        <i class="material-icons">add</li>
+                <a id="${btn}" onclick="cart('${bracelets[con-1].name}','${bracelets[con-1]
+                    .price}','${URL}','${con}','${btn}')" class="btn btn-floating 
+                    halfway-fab waves-effect waves-light red">
+                    <i class="material-icons">add</li>
                 </a>
               </div>
               <div class="card-content">
               <i class="material-icons" style="color:orange">star</li>
               <i class="material-icons" style="color:orange">star</li>
               <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
+              
               <span class="card-title">${bracelets[con-1].name}</span>
               <p>Price: ${bracelets[con-1].price}</p>
                </div>
@@ -90,26 +90,29 @@ var miniNotebooksAll = (con) => {
     let URL = `img/mininotebooks/mininotebook-${con}.jpg`;
     let btn = `btnMiniNotebook${con}`;
 
-    return `<div class="col s3 wow fadeInUp data-wow-delay="3s" data-wow-offset="300" ">
-              <div class="card">
-              <div class="card-image">
-                <img src="${URL}">
-                <a id="${btn}" onclick="cart('${miniNotebooks[con-1].name}', '${miniNotebooks[con-1].price}', 
-                    ${URL}', '${con}', '${btn}')" class="btn btn-floating halfway-fab waves-effect waves-light red">
+    return `
+        <div class="col s3 wow fadeInUp data-wow-delay="3s" data-wow-offset="300" ">
+            <div class="card">
+                <div class="card-image">
+                    <img src="${URL}">
+                    <a id="${btn}" onclick="cart('${miniNotebooks[con-1].name}','${miniNotebooks[con-1]
+                        .price}','${URL}','${con}','${btn}')" class="btn btn-floating 
+                        halfway-fab waves-effect waves-light red">
                         <i class="material-icons">add</li>
-                </a>
-              </div>
-              <div class="card-content">
-              <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
-              <span class="card-title">${miniNotebooks[con-1].name}</span>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                    <i class="material-icons" style="color:orange">star</li>
+                    <i class="material-icons" style="color:orange">star</li>
+                    <i class="material-icons" style="color:orange">star</li>
+                    <i class="material-icons" style="color:orange">star</li>
+                    <i class="material-icons" style="color:orange">star</li>
+                    <span class="card-title">${miniNotebooks[con-1].name}</span>
               <p>Price: ${miniNotebooks[con-1].price}</p>
                </div>
             </div>
-        </div>`
+        </div>
+        `
 };
 
 //ANIMATION
@@ -127,7 +130,7 @@ const animation= () => {
 };
 
 //CART FUNCTIONS
-const cart= (name, price, url, con, btncart) => {
+const cart = (name, price, url, con, btncart) => {
     let item = {
         name: name,
         price: price,
