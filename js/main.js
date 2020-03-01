@@ -1,3 +1,5 @@
+console.log('Si puedes ver esto, entonces todo va de maravilla :D');
+
 //Global
 let products = [];
 let cartItems = [];
@@ -109,6 +111,20 @@ const miniNotebooksAll = (con) => {
             </div>
         </div>`
 };
+
+//ANIMATION
+const animation= () => {
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 2000
+    });
+    Toast.fire({
+        type: 'success',
+        title: 'Added to shopping cart'
+    });
+}
 
 
 
