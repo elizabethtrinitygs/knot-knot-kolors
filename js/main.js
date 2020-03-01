@@ -124,6 +124,30 @@ const animation= () => {
         type: 'success',
         title: 'Added to shopping cart'
     });
+};
+
+//CART FUNCTIONS
+const cart= (name, price, url, con, btncart) => {
+    let item = {
+        name: name,
+        price: price,
+        url: url
+    }
+    cartItems.push(item);
+    let storage = JSON.parse(localStorage.getItem("cart"));
+    if (storage === null) {
+        products.push(item);
+        localStorage.setItem("cart", JSON.stringify(products));
+    } 
+    else {
+        products = JSON.parse(localStorage.getItem("cart"));
+        products.push(item);
+        localStorage.setItem("cart", JSON.stringify(products));
+    }
+    products = JSON.parse(localStorage.getItem("cart"));
+    cart_n.innerHTML = ` [${products.length}]`;
+    document.getElementById(btncart).style.display= 'none';
+    animation();
 }
 
 
