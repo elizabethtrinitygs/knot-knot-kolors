@@ -165,6 +165,11 @@ document.addEventListener('DOMContentLoaded', function () {
         duration: 100
     });
 });
+//NAVBAR MATERIALIZE CSS
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems);
+});
 
 //RENDER
 const render = () => {

@@ -14,7 +14,24 @@
 <body onload="render()">
     <!--///.\\\.///.\\\.HEADER.///.\\\.///.\\\.-->
     <header>
-        <nav class="cyan lighten-1">
+    <nav class=" purple darken-1">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo m-1-2">Knot Knot Kolors</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="cart/cart.html">My Cart<span id="cart-n"></span></a></li>
+            <li><a href="#modal-1" class="modal-trigger">Admin<p id="cart-n"></p></a></li>
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="cart/cart.html">My Cart<span id="cart-n"></span></a></li>
+            <li><a href="#modal-1" class="modal-trigger">Admin<p id="cart-n"></p></a></li>
+      </ul>
+    </header>
+    <!-- <header>
+        <nav class=" ">
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo m-1-2">Knot Knot Kolors</a>
 
@@ -28,7 +45,7 @@
                 </ul>
             </div>
         </nav>
-    </header>
+    </header> -->
     <!--///.\\\.///.\\\.CONTAINER.///.\\\.///.\\\.-->
     <main role="main">
         <div class="carousel carousel-slider center">
@@ -71,13 +88,28 @@
               <br>
           </section>
 
-          <footer class="container">
-              <p class="float-right">
-                  <a href="#">TOP</a>
-              </p>
+          <footer class="page-footer lime darken-3">
+            <div class="container">
               <div class="row">
-                  Tiendita en line por Trinity GS
+                <div class="col l6 s12">
+                  <h5 class="white-text">Tiendita online de Triny :)</h5>
+                  <p class="grey-text text-lighten-4">Vendiendo pulseritas hechas con hilo cañamo e hilo encerado de colores.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Links de contacto</h5>
+                  <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Linkedin</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Github</a></li>
+                  </ul>
+                </div>
               </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container center">
+              © 2020 Knot Knot Kolors by SETG
+              <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+              </div>
+            </div>
           </footer>
     </main>
 
