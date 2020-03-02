@@ -35,7 +35,7 @@ const miniNotebooks = [
 ];
 //HTML
 const braceletsAll = (con) => {
-    let URL = `img/bracelets/bracelet-${con}.jpg`;
+    let URL = `img/bracelets/bracelet${con}.jpg`;
     let btn = `btnBracelet${con}`;
 
         return `<div class="column">
@@ -43,20 +43,19 @@ const braceletsAll = (con) => {
           <div class="card">
             <div class="card-image">
               <img src="${URL}">
-              <span class="card-title black-text">${bracelets[con-1].name}</span>
               <a id="${btn}" onclick="cart('${bracelets[con-1].name}','${bracelets[con-1]
                  .price}','${URL}','${con}','${btn}')"
               class="btn-floating halfway-fab waves-effect waves-light red">
               <i class="material-icons">add</i></a>
             </div>
             <div class="card-content">
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
             <span class="card-title">${bracelets[con-1].name}</span>
-            <p>Price: ${bracelets[con-1].price}</p>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <h6>Price: ${bracelets[con-1].price}</h6>
             </div>
           </div>
         </div>
@@ -72,20 +71,19 @@ const notebooksAll = (con) => {
           <div class="card">
             <div class="card-image">
               <img src="${URL}">
-              <span class="card-title black-text">${notebooks[con-1].name}</span>
               <a id="${btn}" onclick="cart('${notebooks[con-1].name}','${notebooks[con-1]
                  .price}','${URL}','${con}','${btn}')"
               class="btn-floating halfway-fab waves-effect waves-light red">
               <i class="material-icons">add</i></a>
             </div>
             <div class="card-content">
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
             <span class="card-title">${notebooks[con-1].name}</span>
-            <p>Price: ${notebooks[con-1].price}</p>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <h6>Price: ${notebooks[con-1].price}</h6>
             </div>
           </div>
         </div>
@@ -101,20 +99,19 @@ const miniNotebooksAll = (con) => {
           <div class="card">
             <div class="card-image">
               <img src="${URL}">
-              <span class="card-title black-text">${miniNotebooks[con-1].name}</span>
               <a id="${btn}" onclick="cart('${miniNotebooks[con-1].name}','${miniNotebooks[con-1]
                  .price}','${URL}','${con}','${btn}')"
               class="btn-floating halfway-fab waves-effect waves-light red">
               <i class="material-icons">add</i></a>
             </div>
             <div class="card-content">
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
-            <i class="material-icons amber-text text-darken-2">star</i>
             <span class="card-title">${miniNotebooks[con-1].name}</span>
-            <p>Price: ${miniNotebooks[con-1].price}</p>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <h6>Price: ${miniNotebooks[con-1].price}</h6>
             </div>
           </div>
         </div>
