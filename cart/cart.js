@@ -58,5 +58,5 @@ document.getElementById('formCart').addEventListener('submit', (e)=> {
         showConfirmButton: true,
         timer: 50000
     });
-    clean();
+    clean(); //video 1:56:00 min
 })
