@@ -3,8 +3,15 @@
     "public": "public",
     "ignore": [
       "firebase.json",
+      "js/cart.js",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
