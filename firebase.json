@@ -3,7 +3,7 @@
     "public": "public",
     "ignore": [
       "firebase.json",
-      "js/cart.js",
+      "cart/cart.js",
       "**/.*",
       "**/node_modules/**"
     ],
