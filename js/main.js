@@ -10,14 +10,14 @@ let notebook = document.getElementById('notebook');
 let miniNotebook = document.getElementById('mini-notebook');
 //Information
 const bracelets = [
-    { name: 'Mod-roja', price: 45 },
-    { name: 'Mod-verde', price: 45 },
-    { name: 'Mod-morada', price: 45 },
-    { name: 'Mod-naranja', price: 45 },
-    { name: 'Mod-rosa', price: 45 },
-    { name: 'Mod-amarillo', price: 45 },
-    { name: 'Mod-azul', price: 45 },
-    { name: 'Mod-turquesa', price: 45 }
+    { name: 'Mod.1 roja', price: 45 },
+    { name: 'Mod.2 verde', price: 45 },
+    { name: 'Mod.3 morada', price: 45 },
+    { name: 'Mod.4 naranja', price: 45 },
+    { name: 'Mod.5 rosa', price: 45 },
+    { name: 'Mod.6 amarillo', price: 45 },
+    { name: 'Mod.7 azul', price: 45 },
+    { name: 'Mod.8 turquesa', price: 45 }
 ];
 
 const notebooks = [
@@ -38,81 +38,87 @@ const braceletsAll = (con) => {
     let URL = `img/bracelets/bracelet-${con}.jpg`;
     let btn = `btnBracelet${con}`;
 
-    return `<div class="col s3 wow fadeInUp data-wow-delay="3s" data-wow-offset="300" ">
-              <div class="card">
-              <div class="card-image">
-                <img src="${URL}">
-                <a id="${btn}" onclick="cart('${bracelets[con-1].name}','${bracelets[con-1]
-                    .price}','${URL}','${con}','${btn}')" class="btn btn-floating 
-                    halfway-fab waves-effect waves-light red">
-                    <i class="material-icons">add</li>
-                </a>
-              </div>
-              <div class="card-content">
-              <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
-              
-              <span class="card-title">${bracelets[con-1].name}</span>
-              <p>Price: ${bracelets[con-1].price}</p>
-               </div>
+        return `<div class="column">
+        <div class="col s12 m4 wow fadeInUp data-wow-delay="3s" data-wow-offset="300" ">
+          <div class="card">
+            <div class="card-image">
+              <img src="${URL}">
+              <span class="card-title black-text">${bracelets[con-1].name}</span>
+              <a id="${btn}" onclick="cart('${bracelets[con-1].name}','${bracelets[con-1]
+                 .price}','${URL}','${con}','${btn}')"
+              class="btn-floating halfway-fab waves-effect waves-light red">
+              <i class="material-icons">add</i></a>
             </div>
-        </div>`
+            <div class="card-content">
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <span class="card-title">${bracelets[con-1].name}</span>
+            <p>Price: ${bracelets[con-1].price}</p>
+            </div>
+          </div>
+        </div>
+      </div> `
 };
 
 const notebooksAll = (con) => {
-    let URL = `img/notebooks/notebook-${con}.jpg`;
+    let URL = `img/notebooks/notebook${con}.jpg`;
     let btn = `btnNotebook${con}`;
 
-    return `<div class="col s3 wow fadeInUp data-wow-delay="3s" data-wow-offset="300" ">
-              <div class="card">
-              <div class="card-image">
-                <img src="${URL}">
-                <a id="${btn}" onclick="cart('${notebooks[con-1].name}', '${notebooks[con-1].price}', 
-                    ${URL}', '${con}', '${btn}')" class="btn btn-floating halfway-fab waves-effect waves-light red">
-                        <i class="material-icons">add</li>
-                </a>
-              </div>
-              <div class="card-content">
-              <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
-              <i class="material-icons" style="color:orange">star</li>
-              <span class="card-title">${notebooks[con-1].name}</span>
-              <p>Price: ${notebooks[con-1].price}</p>
-               </div>
+    return `<div class="column">
+        <div class="col s12 m4 wow fadeInUp data-wow-delay="3s" data-wow-offset="300" ">
+          <div class="card">
+            <div class="card-image">
+              <img src="${URL}">
+              <span class="card-title black-text">${notebooks[con-1].name}</span>
+              <a id="${btn}" onclick="cart('${notebooks[con-1].name}','${notebooks[con-1]
+                 .price}','${URL}','${con}','${btn}')"
+              class="btn-floating halfway-fab waves-effect waves-light red">
+              <i class="material-icons">add</i></a>
             </div>
-        </div>`
+            <div class="card-content">
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <span class="card-title">${notebooks[con-1].name}</span>
+            <p>Price: ${notebooks[con-1].price}</p>
+            </div>
+          </div>
+        </div>
+      </div> `
 };
 
 var miniNotebooksAll = (con) => {
     let URL = `img/mininotebooks/mininotebook-${con}.jpg`;
     let btn = `btnMiniNotebook${con}`;
 
-    return `
-        <div class="col s3 wow fadeInUp data-wow-delay="3s" data-wow-offset="300" ">
-            <div class="card">
-                <div class="card-image">
-                    <img src="${URL}">
-                    <a id="${btn}" onclick="cart('${miniNotebooks[con-1].name}','${miniNotebooks[con-1]
-                        .price}','${URL}','${con}','${btn}')" class="btn btn-floating 
-                        halfway-fab waves-effect waves-light red">
-                        <i class="material-icons">add</li>
-                        </a>
-                    </div>
-                    <div class="card-content">
-                    <i class="material-icons" style="color:orange">star</li>
-                    <i class="material-icons" style="color:orange">star</li>
-                    <i class="material-icons" style="color:orange">star</li>
-                    <i class="material-icons" style="color:orange">star</li>
-                    <i class="material-icons" style="color:orange">star</li>
-                    <span class="card-title">${miniNotebooks[con-1].name}</span>
-              <p>Price: ${miniNotebooks[con-1].price}</p>
-               </div>
+    return `<div class="column">
+        <div class="col s12 m4 wow fadeInUp data-wow-delay="3s" data-wow-offset="300" ">
+          <div class="card">
+            <div class="card-image">
+              <img src="${URL}">
+              <span class="card-title black-text">${miniNotebooks[con-1].name}</span>
+              <a id="${btn}" onclick="cart('${miniNotebooks[con-1].name}','${miniNotebooks[con-1]
+                 .price}','${URL}','${con}','${btn}')"
+              class="btn-floating halfway-fab waves-effect waves-light red">
+              <i class="material-icons">add</i></a>
             </div>
+            <div class="card-content">
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <i class="material-icons amber-text text-darken-2">star</i>
+            <span class="card-title">${miniNotebooks[con-1].name}</span>
+            <p>Price: ${miniNotebooks[con-1].price}</p>
+            </div>
+          </div>
         </div>
-        `
+      </div> `
 };
 
 //ANIMATION
@@ -168,5 +174,6 @@ const render = () => {
     new WOW().init();
     for ( let index = 1; index <= 8; index++) {
         bracelet.innerHTML += `${braceletsAll(index)}`;
+        notebook.innerHTML += `${notebooksAll(index)}`;
     }
 };
