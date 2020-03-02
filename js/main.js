@@ -92,8 +92,8 @@ const notebooksAll = (con) => {
       </div> `
 };
 
-var miniNotebooksAll = (con) => {
-    let URL = `img/mininotebooks/mininotebook-${con}.jpg`;
+const miniNotebooksAll = (con) => {
+    let URL = `img/mininotebooks/mininotebook${con}.jpg`;
     let btn = `btnMiniNotebook${con}`;
 
     return `<div class="column">
@@ -175,5 +175,6 @@ const render = () => {
     for ( let index = 1; index <= 8; index++) {
         bracelet.innerHTML += `${braceletsAll(index)}`;
         notebook.innerHTML += `${notebooksAll(index)}`;
+        miniNotebook.innerHTML += `${miniNotebooksAll(index)}`;
     }
 };
