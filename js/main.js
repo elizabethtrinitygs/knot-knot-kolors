@@ -174,7 +174,17 @@ const render = () => {
     new WOW().init();
     for ( let index = 1; index <= 8; index++) {
         bracelet.innerHTML += `${braceletsAll(index)}`;
+        // notebook.innerHTML += `${notebooksAll(index)}`;
+        // miniNotebook.innerHTML += `${miniNotebooksAll(index)}`;
+    }
+    for ( let index = 1; index <= 4; index++) {
         notebook.innerHTML += `${notebooksAll(index)}`;
         miniNotebook.innerHTML += `${miniNotebooksAll(index)}`;
+    }
+    if (localStorage.getItem('cart')==null) {
+
+    } else {
+        products= JSON.parse(localStorage.getItem('cart'));
+        cart_n.innerHTML = `[${products.length}]`;
     }
 };
