@@ -65,4 +65,4 @@ node_modules/
 .env
 
 # apikey
-js/cart.js
+cart/cart.js
