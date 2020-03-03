@@ -11,7 +11,7 @@
 
     <title>KnotKnot Kolors</title>
 </head>
-<body>
+<body onload="render()">
     <!--///.\\\.///.\\\.HEADER.///.\\\.///.\\\.-->
     <header>
     <nav class=" purple darken-1">
@@ -44,10 +44,10 @@
     </main>
 
     <!--MODAL-->
-  <div id="modal-1" class="modal">
+  <div id="modal1" class="modal">
     <div class="modal-content">
       <div class="row">
-        <form id="form-cart" class="col s12">
+        <form id="formCart" class="col s12">
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">account_circle</i>
@@ -88,9 +88,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
-<!-- <script src="js/login.js"></script>
-<script src="js/main.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase.js"></script>
+
+
+<!-- <script src="js/login.js"></script> -->
+
 <script src="cart.js"></script>
 </body>
 </html>
