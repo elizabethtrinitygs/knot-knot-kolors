@@ -1,17 +1,17 @@
 let x = document.getElementById('userName');
-let p = document.getAnimations('userPassword');
+let p = document.getElementById('userPassword');
 
 document.getElementById('formLogin').addEventListener('submit', (ee) => {
     ee.preventDefault();
     console.log(x.value);
     console.log(p.value);
-    if (x.value === 'admin@gmail.com' && p.value === "querty") {
+    if (x.value === "admin@gmail.com" && p.value === "123456") {
         swal.fire({
             position: 'center',
             type: 'success',
             title: 'Welcome',
             text: 'Access Granted'
-        });
+        })
         x.value = '';
         p.value = '';
         setTimeout(() => {
@@ -27,7 +27,7 @@ document.getElementById('formLogin').addEventListener('submit', (ee) => {
         x.value = '';
         p.value= '';
     }
-    const loadPage = () => {
-        window.location.href= "./admin.html";
+    let loadPage = () => {
+        window.location.href= "admin/admin.html";
     }
 });
